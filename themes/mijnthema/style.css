@@ -1,16 +1,126 @@
-/**
- * Theme Name:        M9PROG_VOORBEELD_NAAM
- * Theme URI:         https://ma-web.nl
- * Description:       This is a custom WordPress theme example
- * Version:           0.0.1
- * Author:            Jasper Heidebrink
- * Author URI:        https://ma-web.nl
- * Tags:              m9prog
- * Text Domain:       M9PROG_VOORBEELD_NAAM
- * Domain Path:       /languages
- * Tested up to:      6.5
- * Requires at least: 6.4
- * Requires PHP:      8.2
- * License:           GNU General Public License v2.0 or later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- */
+/*
+Theme Name: Portfolio Theme
+Description: Minimal portfolio grid theme for school
+Version: 1.1
+Author: Your Name
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #000f37, #990f0f, #ff4050, #a90000);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+header nav a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.project {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.project h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.project a {
+    color: #0073aa;
+    text-decoration: none;
+}
+.project a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #fff;
+    margin-top: auto;
+}
+
+.github-profile {
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 200px;
+}
+.github-profile img {
+  transition: transform 0.3s ease;
+}
+.github-profile img:hover {
+  transform: scale(1.05);
+}
+
+.go-to-projects {
+  text-align: center;
+  margin: 20px 0;
+}
+.go-to-projects a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0073aa;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.go-to-projects a:hover {
+  background: #005f8d;
+}
