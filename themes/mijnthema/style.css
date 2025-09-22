@@ -1,126 +1,191 @@
 /*
-Theme Name: Portfolio Theme
-Description: Minimal portfolio grid theme for school
-Version: 1.1
-Author: Your Name
+Theme Name: Modern White/Blue Portfolio
+Description: Strak wit/blauw portfolio met scroll-header en skills/projecten
+Version: 1.0
+Author: Yassine Benmeseoud
 */
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(-45deg, #000f37, #990f0f, #ff4050, #a90000);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-header {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 10px 20px;
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: top 0.3s;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header h1 {
-    font-size: 20px;
-    margin: 0;
-}
-header nav a {
-    color: #fff;
-    margin-left: 15px;
+
+.main-header .logo {
+    font-weight: 700;
+    font-size: 22px;
     text-decoration: none;
-    font-size: 14px;
-}
-header nav a:hover {
-    text-decoration: underline;
+    color: #2563eb;
 }
 
-main {
+.projects-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.projects-dropdown {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    display: none;
+    padding: 10px;
+}
+
+.projects-dropdown a {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    background: white;
     max-width: 1200px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px;
-    padding: 0 20px;
-    flex: 1;
+    margin: 120px auto 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.about-text {
+    padding: 20px 40px;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #64748b;
+}
+
+.skills {
+    background: #2563eb;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.skill-item {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
 }
-.project {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
 }
-.project h2 {
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    transition: all 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
-.project a {
-    color: #0073aa;
+
+.project-card a {
+    color: #2563eb;
     text-decoration: none;
-}
-.project a:hover {
-    text-decoration: underline;
+    font-weight: 500;
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #1a1a1a;
-    color: #fff;
-    margin-top: auto;
-}
-
-.github-profile {
-  text-align: center;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin: 20px auto;
-  max-width: 200px;
-}
-.github-profile img {
-  transition: transform 0.3s ease;
-}
-.github-profile img:hover {
-  transform: scale(1.05);
-}
-
-.go-to-projects {
-  text-align: center;
-  margin: 20px 0;
-}
-.go-to-projects a {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #0073aa;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.go-to-projects a:hover {
-  background: #005f8d;
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .about-text {
+        padding: 20px;
+        text-align: center;
+    }
 }

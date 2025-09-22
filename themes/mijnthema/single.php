@@ -1,9 +1,5 @@
 <?php
-/*
-Template Name: About Page
-*/
 get_header();
-
 the_title();
 the_content();
 
