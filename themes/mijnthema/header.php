@@ -1,25 +1,24 @@
+<!-- index.php -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
-<header>
-    <h1><?php bloginfo('name'); ?></h1>
-    
-    <nav class="nav-container">
-        <div class="dropdown">
-            <button class="dropdown-btn">Projects ▼</button>
-            <div class="dropdown-content">
-                <a href="<?php echo home_url('/projects'); ?>">View All Projects</a>
-                <a href="<?php echo home_url('/web-development'); ?>">Web Development</a>
-                <a href="<?php echo home_url('/mobile-apps'); ?>">Mobile Apps</a>
-                <a href="<?php echo home_url('/design'); ?>">Design</a>
-            </div>
-        </div>
-    </nav>
+<header class="main-header">
+    <div class="header-content">
+        <a href="<?php echo home_url(); ?>" class="logo">Portfolio Van Yassine</a>
+        <nav class="header-nav">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>           
+             <a href="#CV" class="nav-link">CV</a>
+
+        </nav>
+    </div>
 </header>

@@ -142,7 +142,7 @@ body {
 }
 
 .project-card {
-    background: #fff8f8;
+    background: #f1f1f1;
     border-radius: 15px;
     padding: 20px;
     width: 280px;
@@ -182,9 +182,10 @@ body {
 }
 
 .site-footer a {
-    color: #2563eb;
+    color: #ececec;
     text-decoration: none;
     font-weight: 600;
+    margin: 0 1rem;
 }
 
 .site-footer a:hover {
