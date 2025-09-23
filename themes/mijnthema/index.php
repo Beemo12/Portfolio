@@ -1,3 +1,4 @@
+<!-- index.php -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -11,28 +12,32 @@
 
 <header class="main-header">
     <div class="header-content">
-        <a href="<?php echo home_url(); ?>" class="logo">Portfolio</a>
-        <div class="projects-menu">
-            <span class="projects-title">Projects ▼</span>
-            <div class="projects-dropdown">
-                <a href="<?php echo home_url('/projects'); ?>">Bekijk alle projecten</a>
-            </div>
-        </div>
+        <a href="<?php echo home_url(); ?>" class="logo">Portfolio Van Yassine</a>
+        <nav class="header-nav">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>           
+             <a href="#CV" class="nav-link">CV</a>
+
+        </nav>
     </div>
 </header>
 
 <main>
-    <section class="about-me">
+    <section id="about" class="about-me">
         <div class="about-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/image.png" alt="Yassine Benmeseoud">
+            <img src="<?php echo get_template_directory_uri(); ?>/skills/css.png" alt="Yassine Benmeseoud">
         </div>
         <div class="about-text">
             <h1>Yassine Benmeseoud</h1>
             <p>Full Stack Developer - Media College Amsterdam - 3e jaar</p>
+            <p>Mijn naam is Yassine Benmeseoud ik ben een gepassioneerde software developer op de school Media College Amsterdam ik zit in de 3e jaar
+                ik beheers zelf verschilende programeer talen zoals: HTML, CSS, JS, PHP en nog meer.
+            </p>
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <h2>Mijn Vaardigheden</h2>
         <div class="skills-grid">
             <div class="skill-item"><img src="<?php echo get_template_directory_uri(); ?>/skills/docker.png" alt="Docker"></div>
@@ -44,7 +49,7 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2>Mijn Projecten</h2>
         <div class="projects-grid">
             <?php
@@ -69,29 +74,4 @@
     </section>
 </main>
 
-<?php wp_footer(); ?>
-
-<script>
-let lastScroll = 0;
-const header = document.querySelector('.main-header');
-document.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        header.style.top = '-100px'; // hide
-    } else {
-        header.style.top = '0'; // show
-    }
-    lastScroll = currentScroll;
-});
-
-const projectsMenu = document.querySelector('.projects-menu');
-projectsMenu.addEventListener('mouseenter', () => {
-    projectsMenu.querySelector('.projects-dropdown').style.display = 'block';
-});
-projectsMenu.addEventListener('mouseleave', () => {
-    projectsMenu.querySelector('.projects-dropdown').style.display = 'none';
-});
-</script>
-
-</body>
-</html>
+<?php get_footer(); ?>
