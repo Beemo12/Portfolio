@@ -52,5 +52,35 @@ get_header();
         </div>
     </section>
 </main>
+<section id="CV" class="cv-section" style="text-align:center; padding:60px 20px;">
+    <h2>Curriculum Vitae</h2>
+    <button id="openCV" style="padding:12px 24px; background:white; color:black; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
+        Bekijk CV
+    </button>
+</section>
+
+<div id="cvModal" class="cv-modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.6);">
+    <div style="background:#fff; margin:8% auto; padding:30px; border-radius:15px; width:80%; max-width:800px; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.2);">
+        <span id="closeCV" style="position:absolute; top:15px; right:20px; font-size:28px; font-weight:bold; color:#2563eb; cursor:pointer;">&times;</span>
+        <h2 style="margin-bottom:20px; color:#2563eb;">Curriculum Vitae</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim. Curabitur vitae velit in neque dictum luctus a ut diam. Vivamus volutpat, magna nec ullamcorper malesuada, risus nisl fermentum arcu, in facilisis risus nibh eu justo.</p>
+        <p>Phasellus vel justo non magna malesuada vehicula. Ut finibus sapien a malesuada aliquam. Donec sagittis justo ac mi egestas, nec ullamcorper erat ultrices. Cras congue velit eu felis convallis, vel sollicitudin enim mattis.</p>
+        <p>Praesent dignissim, augue in sodales sodales, magna elit maximus leo, at tristique sapien urna non risus. Sed a cursus elit. Aliquam in enim risus. Duis euismod enim id orci fermentum tincidunt.</p>
+    </div>
+</div>
+
+<script>
+document.getElementById("openCV").addEventListener("click", function() {
+    document.getElementById("cvModal").style.display = "block";
+});
+document.getElementById("closeCV").addEventListener("click", function() {
+    document.getElementById("cvModal").style.display = "none";
+});
+window.addEventListener("click", function(e) {
+    if (e.target == document.getElementById("cvModal")) {
+        document.getElementById("cvModal").style.display = "none";
+    }
+});
+</script>
 
 <?php get_footer(); ?>

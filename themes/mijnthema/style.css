@@ -173,6 +173,33 @@ body {
     font-weight: 500;
 }
 
+.cv-section {
+    background: #2563eb;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.cv-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.cv-section button {
+    padding: 12px 24px;
+    background: white;
+    color: #64748b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.cv-section button:hover {
+    transform: scale(1.05);
+    background: #f1f5f9;
+}
+
+
 .site-footer {
     background: #1e293b;
     color: white;
