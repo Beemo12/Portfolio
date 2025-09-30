@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-
 <main>
     <section id="about" class="about-me">
         <div class="about-image">
@@ -15,7 +14,6 @@ get_header();
             </p>
         </div>
     </section>
-
     <section id="skills" class="skills">
         <h2>Mijn Vaardigheden</h2>
         <div class="skills-grid">
@@ -27,7 +25,6 @@ get_header();
             <div class="skill-item"><img src="<?php echo get_template_directory_uri(); ?>/skills/mysql.png" alt="MySQL"></div>
         </div>
     </section>
-
     <section id="projects" class="projects">
         <h2>Mijn Projecten</h2>
         <div class="projects-grid">
@@ -52,35 +49,105 @@ get_header();
         </div>
     </section>
 </main>
-<section id="CV" class="cv-section" style="text-align:center; padding:60px 20px;">
+
+<section id="CV" class="cv-section">
     <h2>Curriculum Vitae</h2>
-    <button id="openCV" style="padding:12px 24px; background:white; color:black; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
-        Bekijk CV
-    </button>
+    <button id="openCV">Bekijk CV</button>
 </section>
 
-<div id="cvModal" class="cv-modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.6);">
-    <div style="background:#fff; margin:8% auto; padding:30px; border-radius:15px; width:80%; max-width:800px; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.2);">
-        <span id="closeCV" style="position:absolute; top:15px; right:20px; font-size:28px; font-weight:bold; color:#2563eb; cursor:pointer;">&times;</span>
-        <h2 style="margin-bottom:20px; color:#2563eb;">Curriculum Vitae</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim. Curabitur vitae velit in neque dictum luctus a ut diam. Vivamus volutpat, magna nec ullamcorper malesuada, risus nisl fermentum arcu, in facilisis risus nibh eu justo.</p>
-        <p>Phasellus vel justo non magna malesuada vehicula. Ut finibus sapien a malesuada aliquam. Donec sagittis justo ac mi egestas, nec ullamcorper erat ultrices. Cras congue velit eu felis convallis, vel sollicitudin enim mattis.</p>
-        <p>Praesent dignissim, augue in sodales sodales, magna elit maximus leo, at tristique sapien urna non risus. Sed a cursus elit. Aliquam in enim risus. Duis euismod enim id orci fermentum tincidunt.</p>
+<!-- Modal -->
+<div id="cvModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="cv-content">
+            <h2><strong>Yassine Benmeseoud</strong></h2>
+            <p>+31 6 57253984 | yassinemens53@gmail.com<br>12/09/2007</p>
+            
+            <h2><strong>Over mij</strong></h2>
+            <p>Passie voor <strong>software development</strong>, <strong>krachttraining (hypertrofie)</strong> en <strong>motorvoertuigtechniek</strong>. Sterk analytisch, klantgericht en leergierig. Ervaring met zowel front-end als back-end ontwikkeling en affiniteit met techniek en servicegericht werk.</p>
+            
+            <h2><strong>Opleiding</strong></h2>
+            <p><strong>2023 – heden | Media College Amsterdam</strong><br>
+            Software Development (3e jaar)</p>
+            <ul>
+                <li>Ervaring met front-end & back-end</li>
+                <li>Talen & tools: PHP, SQL, HTML, CSS, JavaScript, SCSS, Sass, Docker</li>
+            </ul>
+            
+            <p><strong>2019 – 2023 | Yuverta</strong><br>
+            Natuur & Koken</p>
+            <ul>
+                <li>Ervaring met plantaardige verwerking, bloemschikken en bereiding van diverse maaltijden</li>
+            </ul>
+            
+            <h2><strong>Werkervaring</strong></h2>
+            <p><strong>2025/6 – 2025/9 | Burgers n' Shake</strong> – Courier</p>
+            <ul>
+                <li>Behalen van tijdsdoelen bij bezorgingen</li>
+                <li>Klantvriendelijke service</li>
+            </ul>
+            
+            <p><strong>2025/1 – 2025/3 | The Health House</strong> – Winkelmedewerker</p>
+            <ul>
+                <li>Systematisch behalen van verkooptargets</li>
+                <li>Adviseren van klanten over training en voedingssupplementen</li>
+                <li>Sterke klantgerichtheid en flexibiliteit</li>
+            </ul>
+            
+            <p><strong>2020/4 – 2021/5 | Albert Heijn XL</strong> – Winkelmedewerker</p>
+            <ul>
+                <li>Vakkenvullen en spiegelen</li>
+                <li>Klantvriendelijkheid</li>
+            </ul>
+            
+            <h2><strong>Talen</strong></h2>
+            <ul>
+                <li>Nederlands – C2</li>
+                <li>Engels – C2</li>
+                <li>Arabisch – B1</li>
+            </ul>
+            
+            <h2><strong>Vaardigheden</strong></h2>
+            <ul>
+                <li>Oplossen en diagnosticeren van problemen bij motorvoertuigen</li>
+                <li>Programmeren: PHP, SQL, JavaScript, CSS, HTML, SCSS, Docker</li>
+                <li>Ervaring met front-end én back-end ontwikkeling</li>
+                <li>Klantgericht, resultaatgericht en technisch inzicht</li>
+            </ul>
+        </div>
     </div>
 </div>
 
 <script>
-document.getElementById("openCV").addEventListener("click", function() {
-    document.getElementById("cvModal").style.display = "block";
+// Modal functionaliteit
+const modal = document.getElementById('cvModal');
+const openBtn = document.getElementById('openCV');
+const closeBtn = document.getElementById('closeModal');
+
+openBtn.addEventListener('click', function() {
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
 });
-document.getElementById("closeCV").addEventListener("click", function() {
-    document.getElementById("cvModal").style.display = "none";
+
+closeBtn.addEventListener('click', function() {
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
 });
-window.addEventListener("click", function(e) {
-    if (e.target == document.getElementById("cvModal")) {
-        document.getElementById("cvModal").style.display = "none";
+
+// Sluit modal bij klikken buiten de content
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
     }
 });
+    
 </script>
 
 <?php get_footer(); ?>
