@@ -9,7 +9,7 @@ get_header();
         <div class="about-text">
             <h1>Yassine Benmeseoud</h1>
             <p>Full Stack Developer - Media College Amsterdam - 3e jaar</p>
-            <p>Mijn naam is Yassine Benmeseoud ik ben een gepassioneerde software developer op de school Media College Amsterdam ik zit in de 3e jaar
+            <p>Mijn naam is Yassine Benmeseoud ik ben een gepassioneerde software developer op de school Media College Amsterdam ik zit in het 3e jaar
                 ik beheers zelf verschilende programeer talen zoals: HTML, CSS, JS, PHP en nog meer.
             </p>
         </div>
@@ -61,10 +61,10 @@ get_header();
         <button class="close-btn" id="closeModal">&times;</button>
         <div class="cv-content">
             <h2><strong>Yassine Benmeseoud</strong></h2>
-            <p>+31 6 57253984 | yassinemens53@gmail.com<br>12/09/2007</p>
+
             
             <h2><strong>Over mij</strong></h2>
-            <p>Passie voor <strong>software development</strong>, <strong>krachttraining (hypertrofie)</strong> en <strong>motorvoertuigtechniek</strong>. Sterk analytisch, klantgericht en leergierig. Ervaring met zowel front-end als back-end ontwikkeling en affiniteit met techniek en servicegericht werk.</p>
+            <p>Passie voor <strong>software development</strong>. Sterk analytisch, klantgericht en leergierig. Ervaring met zowel front-end als back-end ontwikkeling en affiniteit met techniek en servicegericht werk.</p>
             
             <h2><strong>Opleiding</strong></h2>
             <p><strong>2023 – heden | Media College Amsterdam</strong><br>
@@ -72,12 +72,6 @@ get_header();
             <ul>
                 <li>Ervaring met front-end & back-end</li>
                 <li>Talen & tools: PHP, SQL, HTML, CSS, JavaScript, SCSS, Sass, Docker</li>
-            </ul>
-            
-            <p><strong>2019 – 2023 | Yuverta</strong><br>
-            Natuur & Koken</p>
-            <ul>
-                <li>Ervaring met plantaardige verwerking, bloemschikken en bereiding van diverse maaltijden</li>
             </ul>
             
             <h2><strong>Werkervaring</strong></h2>
@@ -109,7 +103,6 @@ get_header();
             
             <h2><strong>Vaardigheden</strong></h2>
             <ul>
-                <li>Oplossen en diagnosticeren van problemen bij motorvoertuigen</li>
                 <li>Programmeren: PHP, SQL, JavaScript, CSS, HTML, SCSS, Docker</li>
                 <li>Ervaring met front-end én back-end ontwikkeling</li>
                 <li>Klantgericht, resultaatgericht en technisch inzicht</li>
